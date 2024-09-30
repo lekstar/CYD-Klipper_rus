@@ -1,57 +1,34 @@
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/suchmememanyskill/CYD-Klipper)
-[![Donations](https://img.shields.io/badge/Support%20on-Ko--Fi-red)](https://ko-fi.com/suchmememanyskill)
 
-# CYD-Klipper
-An implementation of a wireless Klipper status display on an ESP32 + screen. Uses Moonraker to fetch data.
+# CYD-Klipper-rus
+Это русифицированная версия проекта [CYD-Klipper](https://github.com/suchmememanyskill/CYD-Klipper) --- это беспроводной экран для 3D-принтеров на прошивке Klipper, собранный на основе недорогого сенсорного экрана ESP32-2432S028R. В этой версии добавлена опция выбора языка (английский и русский), также есть возможность добавить любой другой язык --- нужно только нативно перевести все названия кнопок на нужный язык.
 
-A simple and cheap solution to use a dedicated screen with Klipper, a 3d printing Firmware.
+### Что нужно для сборки проекта
 
-![showcase_image](readme/PXL_20231113_171629383.jpg)
+Для сборки экрана требуется отладочная плата ESP32-2432S028R --- это модуль, объединяющий ESP32 и резистивный сенсорный экран с диагональю 2.8". Купить можно в ваших местных интернет-магазинах или на Aliexpress по запросу "ESP32-2432S028R" или "ESP32-2432". Оригинальный проект [CYD-Klipper](https://github.com/suchmememanyskill/CYD-Klipper) можно собрать и на других конфигурациях этой платы с большей диагональю или емкостным экраном, но мы тестировали сборку только на экране ESP32-2432S028R. Подробнее об этих платах можно прочитать в репозитории ["ESP32 Cheap Yellow Display"](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display#where-to-buy).
 
-### Required hardware
+### Особенности
+- Отображение статуса принтера
+- Отображение информации и статистики печати 
+- Запуск печати
+- (Когда принтер в режиме ожидания) позиционировать печатающую голову
+- (В процессе печати) задать обороты вентилятора, поток, скорость печати и параметр z-offset
+- Управление температурой
+- Экструзия/откат филамента
+- Запустить предопределенные макросы
+- Переключение устройств через Moonraker
+- Обновление по OTA
+- Вывод данных в консоль по последовательному порту через USB (115200 8n1, echo off, LF/LF)
 
-A ESP32-2432S028R is required to run this project. You can find out where to buy these on the ["ESP32 Cheap Yellow Display"](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display#where-to-buy) repository.
+### Установка
 
-### Features
-- View printer status
-- View print progress and print statistics
-- Start a print
-- (When the printer is idle) move the printer
-- (During a print) set fan speed, flow rate, speed and z offset
-- Manage temperature
-- Extrude/Retract filament
-- Execute predefined gcode macros
-- Toggle Moonraker power devices
-- OTA updates
-- Serial console over USB (115200 8n1, echo off, LF/LF)
+На данный момент установить прошивку на плату можно только вручную средствами VS Code. Подробнее об установке вы найдете в файле Manual_Install.md.
 
-### Install
+### Фото
+(Здесь будут фото с интерфейсом экрана, но попозже)
 
-[There is a web-based installer available. This is only supported on Chrome, Edge, Arc or Opera, and only on Desktop.](https://suchmememanyskill.github.io/CYD-Klipper/)
-
-On initial install, all data should be wiped. On updates, data should be able to be kept without issues.
-
-When there is an update available, a button in the settings will appear that can be pressed to update. If automatic updates are preferred, there is a toggle in the settings to automatically update. This will right after connecting to wifi update the screen.
-
-### Donate
-
-If you found this project helpful, please consider a donation [to my Ko-Fi](https://ko-fi.com/suchmememanyskill). It would help out a lot in the development of this project, due to the need to buy the screens. 
-
-Thank you!
-
-### Screenshots
-(Quite literally shots of the screen. I'm sorry)
-
--|- 
-:-:|:-:
-![1](readme/1.jpg)|![2](readme/2.jpg)
-![3](readme/3.jpg)|![4](readme/4.jpg)
-![5](readme/5.jpg)|![6](readme/6.jpg)
-![7](readme/7.jpg)|![8](readme/8.jpg)
-![9](readme/9.jpg)|![10](readme/10.jpg)
-
-
-### Credits
+### Благодарности (Acknowledgment)
+- [CYD-Klipper](https://github.com/suchmememanyskill/CYD-Klipper)
 - [xtouch](https://github.com/xperiments-in/xtouch)
 - [ESP32-Cheap-Yellow-Display](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display)
 - [OperatorB](https://github.com/OperatorB) for the ESP32-3248S035C display driver
