@@ -10,7 +10,7 @@
 #include "gcode_img.h"
 
 //const char *ota_url = "https://gist.githubusercontent.com/suchmememanyskill/ece418fe199e155340de6c224a0badf2/raw/0d6762d68bc807cbecc71e40d55b76692397a7b3/update.json"; // Test url
-const char *ota_url = "https://suchmememanyskill.github.io/CYD-Klipper/OTA.json"; // Prod url
+const char *ota_url = "https://github.com/lekstar/CYD-Klipper_rus/blob/master/OTA.json"; // Prod url
 ESP32OTAPull ota_pull;
 static bool update_available;
 static bool ready_for_ota_update = false;

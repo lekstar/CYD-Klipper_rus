@@ -1,7 +1,5 @@
 #pragma once
 
-#define REPO_VERSION "v1.8.0"
-
 String ota_new_version_name();
 bool ota_has_update();
 void ota_do_update(bool variant_automatic = false);
