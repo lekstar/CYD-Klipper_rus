@@ -354,10 +354,10 @@ void settings_section_device(lv_obj_t* panel)
                 lv_label_set_text_fmt(label, "Обновить до %s", ota_new_version_name().c_str());
                 lv_obj_center(label);
 
-                lv_create_custom_menu_entry("Прошивка", btn, panel);
+                lv_create_custom_menu_entry("Устройство", btn, panel);
             }
             else {
-                lv_create_custom_menu_label("Прошивка", panel, ARDUINO_BOARD "  ");
+                lv_create_custom_menu_label("Устройство", panel, ARDUINO_BOARD "  ");
             }
 
             #ifndef CYD_SCREEN_DISABLE_TOUCH_CALIBRATION
