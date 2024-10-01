@@ -59,7 +59,7 @@ def add_configuration(board : str):
     configurations.append({
         "Board": board,
         "Version": repo_version,
-        "URL": f"https://suchmememanyskill.github.io/CYD-Klipper/out/{board}/firmware.bin"
+        "URL": f"https://lekstar.github.io/CYD-Klipper/out/{board}/firmware.bin"
     })
 
 if os.path.exists("out"):
@@ -92,5 +92,5 @@ if os.path.exists(out_dir):
     shutil.rmtree(out_dir)
 shutil.copytree("./out", out_dir)
 
-with open("./_site/OTA.json", "w") as f:
+with open(f"./_site/OTA.json", "w") as f:
     json.dump({"Configurations": configurations}, f)
